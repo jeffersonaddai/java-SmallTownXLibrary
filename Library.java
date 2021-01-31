@@ -39,7 +39,7 @@ public class Library {
         for (Book book : books) {
             if(book.getTitle().equals(bookTitle)){
                 book.returned();
-                System.out.println("You successfully returned The Lord of the Rings");
+                System.out.println("You successfully returned " + bookTitle);
             }
         }
     }
