@@ -39,15 +39,21 @@ public class Library {
         for (Book book : books) {
             if(book.getTitle().equals(bookTitle)){
                 book.returned();
+                System.out.println("You successfully returned The Lord of the Rings");
             }
         }
     }
 
     private void printAvailableBooks() {
+        int numberOfBooks = 0;
         for (Book book : books) {
+            numberOfBooks++;
             if(!book.isBorrowed()){
                 System.out.println(book.getTitle());
             }
+        }
+        if(numberOfBooks == 0){
+            System.out.println("No book in catalog");
         }
     }
     public static void main(String[] args) {
