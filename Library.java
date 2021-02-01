@@ -35,7 +35,7 @@ public class Library {
             System.out.println("Sorry, this book is not in our catalog");
         }
     }
-    private void returnBook(String bookTitle) {
+    public void returnBook(String bookTitle) {
         for (Book book : books) {
             if(book.getTitle().equals(bookTitle)){
                 book.returned();
